@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import CreateUserForm
 from django.contrib import messages
 
+
 def registerPage(request):
     form = CreateUserForm()
 
@@ -15,8 +16,9 @@ def registerPage(request):
             form.save()
             return redirect('login')
 
-    context={'form': form}
+    context = {'form': form}
     return render(request, 'account/register.html', context)
+
 
 def loginPage(request):
 
@@ -32,15 +34,21 @@ def loginPage(request):
         else:
             messages.info(request, 'username or password is incorrect')
 
-    context={}
-    return render(request, 'account/login.html', context)
+    context = {}
+    return render(request, 'accountapp/login.html', context)
+
 
 def logoutUser(request):
     logout(request)
     return redirect('login')
 
+
 @login_required(login_url='login')
 def homepage(request):
     username = request.user
     context = {'username': username}
-    return render(request, 'account/home.html',context)
+    return render(request, 'accountapp/home.html', context)
+
+
+def reset_password(request):
+    return render(request, 'accountapp/reset_password.html')

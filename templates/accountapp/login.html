@@ -127,6 +127,10 @@
         text-decoration: none;
         font-size: 14px;
     }
+    
+    .error-message{
+        color: #e74c3c;
+    }
 </style>
 
 <body>
@@ -140,10 +144,11 @@
                 <input type="password" name="password" id="password" placeholder="Password">
                 <input type="submit" value="Log In" class="submit_button">
                 {% for message in messages %}
-                <p>{{ message }}</p>
+                <p class="error-message">{{ message }}</p>
                 {% endfor %}
-
+                
                 <p> Don't have an account? <a href="{% url 'register' %}">Register</a> </p>
+                <p>Forget Password? <a href="{% url 'password_reset' %}">reset it</a></p>
             </form>
         </div>
     </div>
