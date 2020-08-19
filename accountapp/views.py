@@ -17,7 +17,7 @@ def registerPage(request):
             return redirect('login')
 
     context = {'form': form}
-    return render(request, 'account/register.html', context)
+    return render(request, 'accountapp/register.html', context)
 
 
 def loginPage(request):
