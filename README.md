@@ -22,7 +22,4 @@ SOCIAL_AUTH_GITHUB_KEY = ''
 SOCIAL_AUTH_GITHUB_SECRET = ''
 ```
 
-
-```python3 manage.py migrate```
-
-```python3 manage.py runserver```
+Then migrate and runserver
