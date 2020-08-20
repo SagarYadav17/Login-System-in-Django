@@ -36,16 +36,19 @@ SOCIAL_AUTH_GITHUB_SECRET = ''
 
 1. Login as a superuser
 
-2. In sites under SITES, change example.com
+2. Run the server
+
+3. Log in as admin
+
+4. In sites under SITES, change example.com
     -   Domain name:    127.0.0.1:8000
     -   Display name:   127.0.0.1:8000
     -   Save
 
-3. Add these details in Social applications whitch is under SOCIAL ACCOUNTS
+5. Add these details in Social applications whitch is under SOCIAL ACCOUNTS
     -   Provider:   Google
     -   Name:       (anything you want)
     -   Client id:  (your client from [Google console](https://console.cloud.google.com))
     -   Secret key: (your secret key from[Google console](https://console.cloud.google.com))
     -   Sites: 127.0.0.1:8000 -> Chosen sites
     -   Save
- 
