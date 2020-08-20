@@ -12,25 +12,25 @@ Simple register and login system in django
 
 ## Usage
 
-In [settings.py](loginsystem/settings.py)
+#### In [settings.py](loginsystem/settings.py)
 
-```
-# forget password
-EMAIL_HOST_USER = ''        # your email-id for smtp
-EMAIL_HOST_PASSWORD = ''    # your password
-```
 
-```
-# for login with social media accounts
-SOCIAL_AUTH_FACEBOOK_KEY = ''
-SOCIAL_AUTH_FACEBOOK_SECRET = ''
+1.  Add your email-id and password
+    -   ```
+        EMAIL_HOST_USER = ''        # your email-id for smtp
+        EMAIL_HOST_PASSWORD = ''    # your password
+        ```
+2.  Add cliet key and secret key from providers
+    -   ```
+        SOCIAL_AUTH_FACEBOOK_KEY = ''
+        SOCIAL_AUTH_FACEBOOK_SECRET = ''
 
-SOCIAL_AUTH_TWITTER_KEY = ''
-SOCIAL_AUTH_TWITTER_SECRET = ''
+        SOCIAL_AUTH_TWITTER_KEY = ''
+        SOCIAL_AUTH_TWITTER_SECRET = ''
 
-SOCIAL_AUTH_GITHUB_KEY = ''
-SOCIAL_AUTH_GITHUB_SECRET = ''
-```
+        SOCIAL_AUTH_GITHUB_KEY = ''
+        SOCIAL_AUTH_GITHUB_SECRET = ''
+        ```
 
 #### To login with Google account
 
@@ -49,6 +49,6 @@ SOCIAL_AUTH_GITHUB_SECRET = ''
     -   Provider:   Google
     -   Name:       (anything you want)
     -   Client id:  (your client from [Google console](https://console.cloud.google.com))
-    -   Secret key: (your secret key from[Google console](https://console.cloud.google.com))
+    -   Secret key: (your secret key from [Google console](https://console.cloud.google.com))
     -   Sites: 127.0.0.1:8000 -> Chosen sites
     -   Save
