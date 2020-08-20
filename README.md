@@ -3,15 +3,16 @@ Simple register and login system in django from the [video](https://www.youtube.
 
 ## Usage
 
-To use forget password
+In [settings.py](loginsystem/settings.py)
 
 ```
+# forget password
 EMAIL_HOST_USER = ''        # your email-id for smtp
 EMAIL_HOST_PASSWORD = ''    # your password
 ```
 
-For Login with Social Accounts: Enter your Client key and Secret key here
 ```
+# for login with social media accounts
 SOCIAL_AUTH_FACEBOOK_KEY = ''
 SOCIAL_AUTH_FACEBOOK_SECRET = ''
 
