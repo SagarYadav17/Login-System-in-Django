@@ -40,4 +40,6 @@ EMAIL_HOST_PASSWORD = ''    # your password
     -   Sites: 127.0.0.1:8000 -> Chosen sites
     -   Save
 
+    same steps for Facebook
+
 Note: For login with facebook, you need to navigate [Facebook Developers](https://developers.facebook.com/), but login via Facebook only work on HTTPS protocal therefore it will not work on localhost but you can use implement that for testing purpose it will show the error saying 'The app is not secure'.
