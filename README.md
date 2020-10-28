@@ -1,12 +1,10 @@
 # Login-System-in-Django
-Simple register and login system in django
+Register and Login system in django via Social Accounts
 
 
 ## Features
 
-* Login with GitHub
-* Login with Facebook (required https doesn't work on local host)
-* Login with Twitter
+* Login with Facebook (required https doesn't work on localhost)
 * Login with Google (it's tricky tho)
 * Forget Password
 
@@ -15,22 +13,11 @@ Simple register and login system in django
 #### In [settings.py](loginsystem/settings.py)
 
 
-1.  Add your email-id and password
-    -   ```
-        EMAIL_HOST_USER = ''        # your email-id for smtp
-        EMAIL_HOST_PASSWORD = ''    # your password
-        ```
-2.  Add cliet key and secret key from providers
-    -   ```
-        SOCIAL_AUTH_FACEBOOK_KEY = ''
-        SOCIAL_AUTH_FACEBOOK_SECRET = ''
-
-        SOCIAL_AUTH_TWITTER_KEY = ''
-        SOCIAL_AUTH_TWITTER_SECRET = ''
-
-        SOCIAL_AUTH_GITHUB_KEY = ''
-        SOCIAL_AUTH_GITHUB_SECRET = ''
-        ```
+Add your email-id and password
+```
+EMAIL_HOST_USER = ''        # your email-id for smtp
+EMAIL_HOST_PASSWORD = ''    # your password
+```
 
 #### To login with Google account
 
@@ -52,3 +39,5 @@ Simple register and login system in django
     -   Secret key: (your secret key from [Google console](https://console.cloud.google.com))
     -   Sites: 127.0.0.1:8000 -> Chosen sites
     -   Save
+
+Note: For login with facebook, you need to navigate [Facebook Developers](https://developers.facebook.com/), but login via Facebook only work on HTTPS protocal therefore it will not work on localhost but you can use implement that for testing purpose it will show the error saying 'The app is not secure'.
