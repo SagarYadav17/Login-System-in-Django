@@ -42,15 +42,6 @@ INSTALLED_APPS = [
 
     # apps
     'accountapp',
-
-    # allauth
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-
-    # allauth providers
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.facebook',
 ]
 
 MIDDLEWARE = [
@@ -76,28 +67,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
-                # for allauth templates
-                'django.template.context_processors.request',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'loginsystem.wsgi.application'
-
-
-AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-
-    'social_core.backends.github.GithubOAuth2',
-    'social_core.backends.twitter.TwitterOAuth',
-    'social_core.backends.facebook.FacebookOAuth2',
-]
 
 
 # Database
@@ -148,41 +123,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'TestSite Team <noreply@example.com>'
-
-
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-LOGIN_REDIRECT_URL = 'home'
-
-SITE_ID = 1
-
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'SCOPE': [
-            'profile',
-            'email',
-        ],
-        'AUTH_PARAMS': {
-            'access_type': 'online',
-        }
-    },
-    'facebook': {
-        'METHOD': 'oauth2',
-        'SCOPE': ['email', 'public_profile'],
-        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-        'FIELDS': [
-            'id',
-            'email'
-        ],
-        'EXCHANGE_TOKEN': True,
-        'VERIFIED_EMAIL': False,
-        'VERSION': 'v2.8'}
-}

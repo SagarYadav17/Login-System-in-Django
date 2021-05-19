@@ -19,6 +19,4 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('accountapp.urls')),
-    path('', include('django.contrib.auth.urls'), name='reset_password'),
-    path('accounts/', include('allauth.urls')),
 ]

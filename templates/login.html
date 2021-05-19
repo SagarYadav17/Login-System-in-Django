@@ -19,12 +19,6 @@
         {% endfor %}
 
         <p> Don't have an account? <a href="{% url 'register' %}">Register</a> </p>
-        <p>Forget Password? <a href="{% url 'password_reset' %}">reset it</a></p>
-
-
-        <h5> You can also login with Social Media: </h5>
-        <a href="{% url 'facebook_login' %}">Log in with Facebook</a>
-        <a href="{% url 'google_login' %}">Login with Google</a>
     </form>
 </body>
 
